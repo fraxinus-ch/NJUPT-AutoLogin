@@ -2,9 +2,9 @@ import subprocess as sp
 import httpx, os, re, json
 
 #定义登录时需要用的变量
-USERNAME = "B21080330"      #用户名
-PASSWD = "log10bNY.A123"    #密码
-SEL = 1     #0-校园网；1-中国电信；2-中国移动
+USERNAME = ""      #用户名
+PASSWD = ""    #密码
+SEL = 0     #0-校园网；1-中国电信；2-中国移动
 
 #运营商代号，不要修改
 ISP = ["", "@njxy", "@cmcc"]
