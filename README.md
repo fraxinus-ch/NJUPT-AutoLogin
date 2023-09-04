@@ -6,6 +6,11 @@
 - OS: Windows10
 - Python 3.8.10 (Anaconda3)
 - httpx 0.24.1
+- win10toast 0.9
+
+【版本介绍】
+- NJUPT-AutoLogin.py（源码原文件）：最基本的功能
+- NAL-Toast.pyw（通知版）：经过一些设置后不会弹控制台的黑框
 
 ## ❤准备工作
 
@@ -18,9 +23,13 @@ pip install httpx
 pip install httpx[http2]
 ```
 
-注：`requests`库不支持HTTP/2，所以用的`httpx`，但是我看到其他人的项目用`requests`库也行？
+如果需要使用通知版，还需要额外下载`win10toast`库，命令如下：
 
-然后把源码下载到电脑里
+```
+pip install win10toast
+```
+
+注：`requests`库不支持HTTP/2，所以用的`httpx`，但是我看到其他人的项目用`requests`库也行？
 
 ## ➡修改代码
 
@@ -44,3 +53,9 @@ python ./NJUPT-AutoLogin.py
 pause
 EXIT
 ```
+
+如果需要使用通知版，需要下载本项目的/ico/文件夹下的所有图片文件。
+
+右键`NAL-Toast.pyw`点击创建快捷方式，在“目标路径”的最前面添加`pythonw.exe `，注意和后面的内容要有空格，而且要给Python设置环境变量。
+
+最后把这个快捷方式放到桌面或者开始菜单，需要的时候双击即可。
