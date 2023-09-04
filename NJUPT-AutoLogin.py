@@ -71,13 +71,13 @@ class LoginBot():
         res = json.loads(re.search(R"\((.*?)\);", r.text).group(1))
 
         if int(res["result"]) == 0:
-            self.OnLogin()
+            self.__OnLogin()
         elif int(res["result"]) == 1:
             print("已登录到校园网，请不要重复登录！")
         else:
             os._exit(1)
 
-    def OnLogin(self):
+    def __OnLogin(self):
         #启用HTTP/2.0
         with httpx.Client(headers=self.header, http2=True) as client:
             try:
